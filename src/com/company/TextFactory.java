@@ -1,7 +1,6 @@
 package com.company;
 
 public class TextFactory {
-    String input;
     int hour;
     int year;
     int month;
@@ -9,9 +8,8 @@ public class TextFactory {
     int minute;
     String place;
     int importance;
-    TextFactory(String _input){input=_input;}
-     void stringdealing(){
-        char []a=this.input.toCharArray();
+     void stringdealing(String input){
+        char []a=input.toCharArray();
          int timeposition ;
          int placeposition;
          for(int x=0;x<input.length()-1;x++) {

@@ -78,12 +78,12 @@ public class Mail {
 			StringBuffer content = new StringBuffer(30);
 			getMailTextContent(msg, content);
 			String result = content.toString();
-			result = result.split("<")[0];
-			try{
-			result = result.split("好！")[1];
-			}catch(Exception e){
-			}
-			result = result.split("---")[0];
+//			System.out.println("origin text: "+result);
+//			result = result.split("<")[0];
+//			try{
+//			result = result.split("好！")[1];
+//			}catch(Exception e){
+//			}
 			MailInfoList.add(result);
 			System.out.println("现在共有："+MailInfoList.size()+" 封邮件！");
 		}
