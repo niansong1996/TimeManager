@@ -9,13 +9,25 @@ import java.util.StringJoiner;
  * Created by sarleon on 15-11-14.
  */
 public class Memo {
+	int number;
     int year;
     int month;
     int day;
     int hour;
     int minute;
     String place;
-    int importance;
+    IMP importance;
+	public Memo(int number, int year, int month, int day, 
+			int hour, int minute, String place, IMP importance) {
+		this.number = number;
+		this.year = year;
+		this.month = month;
+		this.day = day;
+		this.hour = hour;
+		this.minute = minute;
+		this.place = place;
+		this.importance = importance;
+	}
 
 
 
