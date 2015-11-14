@@ -1,15 +1,16 @@
 package com.company;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class test {
 
 	public static void main(String[] args) {
-		Scanner scanner=new Scanner(System.in);
-
-		TextFactory textFactory=new TextFactory(scanner.nextLine());
-		textFactory.stringdealing();
-		System.out.print("tsetdfsfsd");
+		Mail mail = new Mail();
+		mail.getMailInfo(3);
+		for(String s : Mail.MailInfoList){
+			System.out.println("OUT COMES :"+s);
+		}
 	}
 
 }
