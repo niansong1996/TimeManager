@@ -119,7 +119,7 @@ public class TextFactory {
          }
 
 
-         System.out.println("year"+year+"place:"+place+"time:"+hour+":"+minute);
+         System.out.println("year"+year+"place:"+place+"time :"+hour+":"+minute);
 
      }
 
