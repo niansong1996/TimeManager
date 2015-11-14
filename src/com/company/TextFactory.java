@@ -12,6 +12,17 @@ public class TextFactory {
         char []a=input.toCharArray();
          int timeposition ;
          int placeposition;
+         for(int x=1;x<input.length()-2;x++){
+             if(a[x]==':'&&Character.isDigit(a[x-1])&&Character.isDigit(a[x+2])&&Character.isDigit(a[x+1])){
+                 if(Character.isDigit(a[x-2])){
+                     hour=Integer.parseInt(input.substring(x-2,x));
+                 }
+                 else
+                     hour=Integer.parseInt(input.substring(x-1,x));
+                 minute=Integer.parseInt(input.substring(x+1,x+3));
+             }
+
+         }
          for(int x=0;x<input.length()-1;x++) {
              if (a[x] == '时' && a[x + 1] == '间') {
                  timeposition = input.indexOf("时间") + 3;
@@ -26,28 +37,51 @@ public class TextFactory {
                  place = placetemp[0];
              }
          }
+         for(int x=0;x<input.length();x++){
+             if(a[x]=='点'){
+                 if(Character.isDigit(a[x-1])){
+
+                     if(Character.isDigit(a[x-2]))
+                         hour=Integer.parseInt(input.substring(x-2,x));
+                     else
+                         hour=Integer.parseInt(input.substring(x-1,x));
+                 }
+             }
+         }
          for(int x=0;x<input.length();x++) {
              if (a[x] == '午') {
                  switch (a[x - 1]) {
                      case '上':
-                         hour = 8;
+                         if(Character.isDigit(a[x+1])){
+                             if(Character.isDigit(a[x+2])){
+                                 hour=Integer.parseInt(input.substring(x+1,x+3));
+                             }
+                             else
+                                 hour=Integer.parseInt(input.substring(x+1,x+2));
+                         }
+                         else
+                            hour = 8;
                          break;
                      case '中':
                          hour = 12;
                          break;
                      case '下':
-                         hour = 17;
+                         if(Character.isDigit(a[x+1])) {
+                             if (Character.isDigit(a[x + 2])) {
+                                 hour =  Integer.parseInt(input.substring(x + 1, x + 3));
+                             } else {
+                                 hour =  Integer.parseInt(input.substring(x + 1, x + 2));
+                             }
+                             hour=hour+12;
+                         }
+
+                         else
+                         hour = 18;
                          break;
                  }
              }
          }
-         for(int x=0;x<input.length();x++){
-             if(a[x]=='点'){
-                 if(Character.isDigit(a[x-1])){
-                     hour=a[x-1];
-                 }
-             }
-         }
+
          for(int x=0;x<input.length();x++){
              if(a[x]=='年')
                  year=Integer.parseInt(input.substring(x-4,x));
@@ -117,11 +151,13 @@ public class TextFactory {
          }
 
 
-         System.out.println("year"+year+"place:"+place+"time :"+hour+":"+minute);
+         System.out.println("year         "+year+"     place:"+place+"     time:"+hour+":"+minute);
 
      }
 
 
     private void saving(){
     }
+
+
 }
