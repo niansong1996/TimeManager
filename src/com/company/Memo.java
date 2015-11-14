@@ -7,7 +7,7 @@ import java.util.GregorianCalendar;
 /**
  * Created by sarleon on 15-11-14.
  */
-public class 备忘录 {
+public class Memo {
 
 
 

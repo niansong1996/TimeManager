@@ -6,12 +6,15 @@ import javax.swing.*;
 public class Main {
 
     public static void main(String[] args) {
-        JFrame jf1=new JFrame();
-
-        mainFrame mf1=new mainFrame();
-        jf1.setVisible(true);
-        jf1.add(mf1);
-        mf1.setVisible(true);
+        JFrame mainFrame =new JFrame();
+        mainFrame.setSize(1280, 720);
+        mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        MainPanel mainPanel =new MainPanel();
+        
+        mainFrame.getContentPane().add(mainPanel);
+        
+        mainFrame.setVisible(true);
 
     }
 }
