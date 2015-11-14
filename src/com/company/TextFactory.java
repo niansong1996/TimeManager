@@ -1,6 +1,6 @@
 package com.company;
 
-public class TextFactory {
+public class TextFactory{
     String input;
     int hour;
     int minute;
