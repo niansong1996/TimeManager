@@ -6,9 +6,15 @@ import java.util.GregorianCalendar;
 /**
  * Created by sarleon on 15-11-14.
  */
-public class Timecompare {
+public class Timecompare implements Runnable{
     Calendar calendar=new GregorianCalendar();
     int year =calendar.get(Calendar.YEAR);
     int month =calendar.get(Calendar.MONTH)+1;
     int day=calendar.get(Calendar.DAY_OF_MONTH);
+    
+	public void run() {
+		
+	}
+    
+    
 }
