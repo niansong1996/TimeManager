@@ -9,7 +9,7 @@ public class test {
 
 		TextFactory textFactory=new TextFactory(scanner.nextLine());
 		textFactory.stringdealing();
-		System.out.print("tset");
+		System.out.print("tsetdfsfsd");
 	}
 
 }
