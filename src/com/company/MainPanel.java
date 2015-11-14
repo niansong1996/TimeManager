@@ -18,7 +18,7 @@ public class MainPanel extends JPanel {
     private JTextField textField4;
 
     public MainPanel() {
-        this.setVisible(true);
+
 //        memoButton.addActionListener(new ActionListener() {
 //            @Override
 //            public void actionPerformed(ActionEvent e) {
@@ -37,6 +37,9 @@ public class MainPanel extends JPanel {
 // >>> IMPORTANT!! <<<
 // DO NOT EDIT OR ADD ANY CODE HERE!
         $$$setupUI$$$();
+        
+        
+        this.setVisible(true);
     }
 
     /**
@@ -136,5 +139,10 @@ public class MainPanel extends JPanel {
         gbc.anchor = GridBagConstraints.WEST;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panel1.add(textField4, gbc);
+        
+        
+        
+        
+        this.add(panel1);
     }
 }
