@@ -37,8 +37,8 @@ public class MainPanel extends JPanel {
 // >>> IMPORTANT!! <<<
 // DO NOT EDIT OR ADD ANY CODE HERE!
         $$$setupUI$$$();
-        
-        
+
+
         this.setVisible(true);
     }
 
@@ -72,7 +72,7 @@ public class MainPanel extends JPanel {
         final JPanel spacer1 = new JPanel();
         gbc = new GridBagConstraints();
         gbc.gridx = 1;
-        gbc.gridy = 4;
+        gbc.gridy = 5;
         gbc.weighty = 10.0;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panel1.add(spacer1, gbc);
@@ -139,10 +139,12 @@ public class MainPanel extends JPanel {
         gbc.anchor = GridBagConstraints.WEST;
         gbc.fill = GridBagConstraints.HORIZONTAL;
         panel1.add(textField4, gbc);
-        
-        
-        
-        
-        this.add(panel1);
+        final JLabel label4 = new JLabel();
+        label4.setText("Label");
+        gbc = new GridBagConstraints();
+        gbc.gridx = 1;
+        gbc.gridy = 4;
+        gbc.anchor = GridBagConstraints.WEST;
+        panel1.add(label4, gbc);
     }
 }
